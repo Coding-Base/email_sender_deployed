@@ -9,10 +9,10 @@ def send_birthday_emails():
 scheduler = BlockingScheduler()
 
 # Add the job to the scheduler (set to run every day at 9:00 AM)
-scheduler.add_job(send_birthday_emails, 'cron', hour=10, minute=00)
+scheduler.add_job(send_birthday_emails, 'cron', hour=13, minute=30)
 
 # Start the scheduler
-print("Scheduler started. Waiting to send birthday emails daily at 02:38 PM...")
+print("Scheduler started. Waiting to send birthday emails daily at 13:30 PM...")
 scheduler.start()
 
 
