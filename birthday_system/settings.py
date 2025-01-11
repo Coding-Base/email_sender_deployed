@@ -54,6 +54,8 @@ MIDDLEWARE = [
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
     'corsheaders.middleware.CorsMiddleware',
+    'django.middleware.security.SecurityMiddleware',
+    'whitenoise.middleware.WhiteNoiseMiddleware', 
 ]
 
 CORS_ALLOW_ALL_ORIGINS = True
@@ -76,6 +78,17 @@ EMAIL_HOST_PASSWORD = 'rvis xrgl qztb ednr'  # Your email password or app passwo
 import logging
 logging.basicConfig(level=logging.WARNING)
 
+DATABASES = {
+    'default': {
+        'ENGINE': 'djongo',
+        'NAME': 'EMAIL_SENDER',
+        'CLIENT': {
+            'host': 'mongodb+srv://osimigbubemigodsgift:mWtHyXvwEEqcGukR@cluster0.kmyaf.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0',
+            'ssl': True,
+            'ssl_cert_reqs': 'CERT_REQUIRED',
+        },
+    },
+}
 
 
 
